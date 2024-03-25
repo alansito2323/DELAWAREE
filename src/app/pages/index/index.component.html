@@ -1,0 +1,36 @@
+
+<div class="flex flex-col items-center text-center">
+  <!-- Logo centrado con Tailwind CSS -->
+  <div class="w-full flex justify-center">
+    <img src="assets/img/logo.png" alt="Logotipo de la Empresa" class="w-48 h-auto">
+  </div>
+
+  
+  <!-- Texto descriptivo con márgenes y tamaños responsivos -->
+  <div class="mt-10 w-full px-4 md:w-2/3 lg:w-1/2">
+    <p class="text-xl md:text-2xl text-white-800">
+      Software para empresas. Protegiendo a más de 100 empresas con nuestro software. Presentes en más de 30 países y ciudades importantes.
+    </p>
+    <!-- Botones con acciones específicas, mejor separación y accesibilidad -->
+    <div class="flex flex-wrap justify-center mt-8 gap-4">
+      <button class="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition ease-in-out duration-300" routerLink="/plans">
+        Comenzar
+      </button>
+      <button (click)="obtenerPhrase()" class="bg-green-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-green-700 transition ease-in-out duration-300">
+        Obtener Frase de Kanye
+      </button>
+    </div>
+    <!-- Botones para acciones de API con mejor descripción -->
+    <div class="flex flex-wrap justify-center mt-4 gap-4">
+      <button (click)="obtenerResponse()" class="bg-yellow-500 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-yellow-600 transition ease-in-out duration-300">
+        Obtener HEAD
+      </button>
+      <button (click)="actualizarDatos()" class="bg-purple-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-purple-700 transition ease-in-out duration-300">
+        Actualizar con PUT
+      </button>
+      <button (click)="enviarDatos()" class="bg-red-600 text-white py-3 px-6 rounded-lg shadow-lg hover:bg-red-700 transition ease-in-out duration-300">
+        Enviar con POST
+      </button>
+    </div>
+  </div>
+</div>
