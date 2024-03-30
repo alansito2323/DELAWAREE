@@ -1,5 +1,5 @@
 {
-  "name": "develaware.com",
+  "name": "develaware",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:develaware.com": "node dist/develaware.com/server/server.mjs"
+    "serve:ssr:develaware": "node dist/develaware/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -16,6 +16,7 @@
     "@angular/common": "^17.1.0",
     "@angular/compiler": "^17.1.0",
     "@angular/core": "^17.1.0",
+    "@angular/fire": "^17.0.1",
     "@angular/forms": "^17.1.0",
     "@angular/material": "^17.2.2",
     "@angular/platform-browser": "^17.1.0",
@@ -29,9 +30,11 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.3",
     "express": "^4.18.3",
+    "firebase": "^10.10.0",
     "jquery": "^3.7.1",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.2",
+    "ngx-cookie-service": "^17.1.0",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.10.6",
     "swiper": "^11.0.7",
