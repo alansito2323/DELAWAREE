@@ -3,9 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common'; // Importa NgFor
 import { DataService } from '../data.service';
 import { Item } from '../item.model';
-import { Datos } from "../../models/datos.model";
-import { DataServices } from "../../services/data.services";
-import { FirestoreService } from "../../services/firestore.service";
 
 
 @Component({
@@ -24,29 +21,12 @@ export class CrudComponent {
   items: Item[] = [];
   editingItem?: Item;
 
-  constructor(private dataService: DataService, private dataServices:DataServices, private firestore: FirestoreService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.loadItems();
+  }
 
-    // this.obtenerDatos().subscribe(misDatos =>{
-    //   console.log(misDatos)
-
-    //   // this.datos= Object.values(misDatos)
-    //   // this.setDatos(this.datos)
-    // })
-  }
-  datos:Datos[] = [
-    //new Datos("Dato 1", "Dato de Ejemplo"),
-    // new Datos("Dato 2", "Dato2 de Ejemplo")
-  ]
-  setDatos(misDatos:Datos[]){
-    this.datos = misDatos;
-  }
-  obtenerDatos(){
-    // return this.dataServices.cargarAlgo()
-    return this.firestore.obtenerDocumentos()
-  }
   loadItems(): void {
     this.dataService.getItems().subscribe(items => this.items = items);
   }

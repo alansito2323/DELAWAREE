@@ -1,15 +1,16 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Item } from "./item.model";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Item } from './item.model';
+
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = "http://localhost:4200/items";
+  private apiUrl = 'http://localhost:3000/items';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.apiUrl);

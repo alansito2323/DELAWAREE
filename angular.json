@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "develaware": {
+    "develaware.com": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/develaware",
+            "outputPath": "dist/develaware.com",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "develaware:build:production"
+              "buildTarget": "develaware.com:build:production"
             },
             "development": {
-              "buildTarget": "develaware:build:development"
+              "buildTarget": "develaware.com:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "develaware:build"
+            "buildTarget": "develaware.com:build"
           }
         },
         "test": {
