@@ -1,0 +1,44 @@
+<div class="container-fluid h-100">
+  <div class="row justify-content-center align-items-center h-100">
+    <div class="col-md-6 col-lg-4">
+      <form #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input type="email" class="form-control" name="email" ngModel />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" ngModel />
+        </div>
+
+        <button type="submit" class="btn btn-primary my-4">Login</button>
+      </form>
+      <a (click)="loginGoogle()"
+        ><button class="btn btn-primary my-3">Iniciar con Google</button></a
+      >
+      <a href="/register"
+        ><button class="btn btn-primary my-3 mx-10">Registrar</button></a
+      >
+      <a href="/reset-password"
+        ><button class="btn btn-link my-3">Recuperar Contraseña</button></a
+      >
+    </div>
+    <!-- <div class="col-4">
+            <form #miFormulario="ngForm" (ngSubmit)="login2(miFormulario)">
+                <div class="mb-3">
+                  <label class="form-label">Nombre</label>
+                  <input type="email" class="form-control" name="email" ngModel>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Contenido</label>
+                  <input type="password" class="form-control" name="password" ngModel>
+                </div>
+                
+                <button type="submit" class="btn btn-primary my-3 mx-3">Login</button>
+                <button class="btn btn-primary my-3 mx-3">Registrar</button>
+              </form>
+        </div> -->
+  </div>
+</div>
